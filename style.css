@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1a1a1a;
+    overflow: hidden;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#fireworks {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.text-container {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.pixel-text {
+    color: #fff;
+    font-size: 3em;
+    text-shadow: 2px 2px #ff6b6b;
+    margin: 10px;
+    animation: float 2s ease-in-out infinite;
+}
+
+.diwali {
+    color: #ffd700;
+    animation-delay: 1s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+.diya {
+    position: relative;
+    z-index: 2;
+    margin-top: 50px;
+}
+
+.flame {
+    width: 20px;
+    height: 30px;
+    background: #ffd700;
+    margin: 0 auto;
+    border-radius: 10px 10px 0 0;
+    animation: flicker 0.5s ease-in-out infinite alternate;
+}
+
+.base {
+    width: 60px;
+    height: 15px;
+    background: #964B00;
+    margin: -5px auto;
+    border-radius: 0 0 30px 30px;
+}
+
+@keyframes flicker {
+    0% {
+        transform: scaleY(1);
+        background: #ffd700;
+    }
+    100% {
+        transform: scaleY(0.8);
+        background: #ff6b6b;
+    }
+}
+
+.firework {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+}
