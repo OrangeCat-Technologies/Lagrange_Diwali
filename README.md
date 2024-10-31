@@ -1,2 +1,3 @@
-# Lagrange_example
-Examples of coding projects created by Lagrange
+# Lagrange_Diwali
+
+Website created by Lagrange
